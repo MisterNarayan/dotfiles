@@ -1,0 +1,32 @@
+
+# file to print geekyshacklebolt over terminal following a fortune
+para="$(fortune -n 130 -s)"
+para_size=${#para}
+
+# this will replace every new line and horizontal tab in "para" with a space.
+para=$(echo "$para" | sed ':a;N;$!ba;s/[\n,\t]/ /g')
+
+line1="${para:0:43}"
+
+if [ ${#para} -ge 43 ]; then
+    para="$(echo $para | sed 's/.\{43\}//')"
+    line2="${para:0:43}"
+else
+    line2="${para:43:${#para}}"
+fi
+
+
+if [ ${#para} -ge 43 ]; then
+    para="$(echo $para | sed 's/.\{43\}//')"
+    line3="${para:0:43}"
+else
+    line3="${para:43:${#para}}"
+fi
+
+echo -e "\033[1m      __  __   _         _                     _   _"
+echo "     |  \/  | (_)  ___  | |_    ___   _ __    | \ | |   __ _   _ __    __ _   _   _    __ _   _ __"
+echo -e "     | |\/| | | | / __| | __|  / _ \ | '__|   |  \| |  / _\` | | '__|  / _\` | | | | |  / _\` | | '_ \           | ${line1} "
+echo "     | |  | | | | \__ \ | |_  |  __/ | |      | |\  | | (_| | | |    | (_| | | |_| | | (_| | | | | |          | ${line2} "
+echo "     |_|  |_| |_| |___/  \__|  \___| |_|      |_| \_|  \__,_| |_|     \__,_|  \__, |  \__,_| |_| |_|          | ${line3} "
+echo "                                                                              |___/"
+

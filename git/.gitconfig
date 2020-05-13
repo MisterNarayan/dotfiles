@@ -1,0 +1,7 @@
+[user]
+	name = misternarayan
+	email = shivanarayansaxena@gmail.com
+	signingkey = 0E18B96428C2F6AF
+[core]
+	excludesfile = /home/shiva/.gitignore_global
+	editor = vim
