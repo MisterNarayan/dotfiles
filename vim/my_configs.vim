@@ -19,7 +19,7 @@ let g:NERDTreeWinSize=30
 
 
 let g:gitgutter_terminal_reports_focus=0
-set updatetime=100 
+set updatetime=2000 
 
 let g:gitgutter_enabled=1
 

@@ -23,6 +23,9 @@ apt install -y openshot
 apt install -y handbrake
 apt install -y mlocate
 apt install -y libgtk-3-dev
+apt install -y gtypist
+apt install -y vlc
+apt install -y audacity
 
 
 # Forked repos
